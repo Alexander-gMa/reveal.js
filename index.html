@@ -1,41 +1,445 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section> 
-				
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>React Native</h1>
+				<aside class="notes">
+					Hi all. my name is Alexander Svintsitsky and the topic of my presentation is React Native</aside>
+				<p>
+					<small>Created by Aliaksandr Svintsitski</small>
+				</p>
+			</section>
+			<section>
+				<h2>What is React Native?</h2>
+				<p>
+					React Native is a cross-platform mobile development framework created by Jordan Walkie, a Facebook
+					software engineer.
+				</p>
+				<img data-src="https://res.cloudinary.com/hc3yn9vs8/image/upload/v1576742126/all-about-react-native-apps-776x415_lgauz0.png"
+					alt="React Native">
+				<aside class="notes">React Native is a JavaScript framework for writing real, natively rendering mobile
+					applications for iOS and Android. It’s based on React, Facebook’s JavaScript library for building
+					user interfaces, but instead of targeting the browser, it targets mobile platforms. In other words:
+					web developers can now write mobile applications that look and feel truly “native,” all from the
+					comfort of a JavaScript library that we already know. Plus, because most of the code you write can
+					be shared between platforms, React Native makes it easy to simultaneously develop for both Android
+					and iOS.
+					Similar to React for the Web, React Native applications are written using a mixture
+					of JavaScript and XML-esque markup, known as JSX. Then, under the hood, the React Native “bridge”
+					invokes the native rendering APIs in Objective-C (for iOS) or Java (for Android). Thus, your
+					application will render using real mobile UI components, not webviews, and will look and feel like
+					any other mobile application. React Native also exposes JavaScript interfaces for platform APIs, so
+					your React Native apps can access platform features like the phone camera, or the user’s location.
+				</aside>
+
+			</section>
+			<section>
+				<aside class="notes">Thousands of apps are using React Native, from established Fortune 500 companies to
+					hot new startups</aside>
+				<h2>Who is using React Native?</h2>
+
+				<img width='800px' data-src="https://miro.medium.com/max/1400/1*ya95VEkRQEsLxX0yRep-qA.jpeg"
+					alt="React Native">
+			</section>
+			<section>
+				<aside class="notes">
+					1) It takes far less time to write the majority of code for one app on React Native than to develop
+					separate, stand-alone apps using Java, Swift, or some other native-supported language.
+					In React Native, when developing apps for multiple platforms, much of the code is reusable from
+					platform to platform.This saves time during app development and allows your business to release the
+					app to the market sooner rather than later.
+
+					The slogan, “write once, use everywhere” accurately conveys one of React Native’s primary advantages
+					and why many big companies that use React Native made the switch in the first place.<br>
+				</aside>
+				<h2>Why react native?</h2>
+				<ul class="r-fit-text">
+					<li>Faster speed of development</li>
+					<ul>
+						<li>Lower cost of development</li>
+						<li>Code reuse</li>
+					</ul>
+					<li>Easier to find developers</li>
+					</li>
+					<li>Ship across multiple platforms</li>
+					<li>Possible to ship over the air updates bypassing App Store / Play store</li>
+				</ul>
+			</section>
+			<section>
+				<aside class="notes">There are 5 simple principles</aside>
+				<h2>How does it work?</h2>
+				<ul>
+					<li class="fragment">Write code like in any other React app</li>
+					<li class="fragment">React can render arbitrary kind of view systems</li>
+					<li class="fragment">React Native has JS wrappers for native views and modules</li>
+					<small class="fragment visible current-fragment">View, Image, Navigator, List, Loading
+						Indicator...</small>
+					<li class="fragment">Separate threads for UI, layout, and Javascript</li>
+					<li class="fragment">Threads communicate asynchronously through the native bridge</li>
+				</ul>
+			</section>
+			<section data-background="rgb(153, 153, 153)">
+				<aside class="notes">
+					React Native works by spinning up a Javascript thread that interprets Javascript
+					code, communicating with native components under the hood. ... Likewise, If you create a button in
+					React Native, it internally creates an Android view. When the Android view is clicked, it forwards
+					the click from native code to Javascript
+				</aside>
+				<img width='70%' data-src="https://janmonschke.com/react-native-introduction/images/rn-architecture.png"
+					alt="React Native">
+			</section>
+			<section data-background='gray'>
+					<aside class="notes">
+						here u can see , that React Native uses the same API structure as React components, you’ll need
+						to understand React component APIs to get started any app with react native</aside>
+					<img width='800px'
+						data-src="https://d33wubrfki0l68.cloudfront.net/361b1cee2abd0c5fff923036f01a3aa203516af9/c9e39/docs/assets/diagram_react-native-components.svg"
+						alt="React Native">
+			</section>
+			<section>
+				<aside class="notes">We've already said that React Native is powered by React, a popular open source
+					library for building user interfaces with JavaScript.
+					And There are core concepts behind React: </aside>
+				<h3>React fundamentals</h3>
+				<section>
+					<ul>
+						<li>components</li>
+						<li>JSX</li>
+						<li>props</li>
+						<li>state</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h4>JSX</h4>
+				<section>
+					<p>
+						JSX is React extension that allows us to write JavaScript that looks like HTML
+					</p>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+								class HelloWorld extends React.Component {
+									render() {
+									return (
+										<h1 className='large'>Hello World</h1>
+									);
+									}
+								}
+						</code></pre>
+				</section>
+				<section>
+					<p>
+						Simple component creation
+					</p>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+								const element = <h1>Hello, World!</h1>;
+						</code></pre>
+					<p>
+						Component creation with properties
+					</p>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+								const name = "Jack";
+								const element = <h1>Hello, {name}</h1>;
+						</code></pre>
+				</section>
+			</section>
+
+			<section>
+				<aside class="notes">
+					Props is short for “properties”. Props let you customize React components.
+					Most of React Native’s Core Components can be customized with props, too. For example, when using
+					Image, you pass it a prop named source to define what image it shows.
+					Image has many different props, including style, which accepts a JS object of design and layout
+					related property-value pairs.
+					You can build many things with props and the Core Components Text, Image, and View! But to build
+					something interactive, you’ll need state.
+				</aside>
+				<h4>Props</h4>
+				<img width='850px'
+					data-src="https://sun9-72.userapi.com/impg/fj-1cpBN2EKecSr77oZmf3Gcvi_SN3pl78d6Vw/Td14HUoG1CU.jpg?size=812x548&quality=96&sign=fa862b2b01d8a0b393c6e55f00de3243&type=album"
+					alt="React Native">
+			</section>
+			<section>
+				<aside class="notes">
+					state is like a component’s personal data storage. State is useful for handling data that changes
+					over time or that comes from user interaction. State gives your components memory!
+				</aside>
+				<h4>State</h4>
+				<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+					class MyComponent extends React.Component (
+						state = {name:'Alex'}
+						changeName = () => {
+							this.setState({name:'Dennis'})
+						}
+						render(){
+							return (
+								<Text>Hello {this.state.name}</Text>
+							)
+						}
+					)
+			</code></pre>
+			</section>
+			<section>
+				<h2>React native components</h2>
+				<section>
+					<aside class="notes">React Native provides a number of built-in Core Components ready for you to use
+						in your app</aside>
+					<h3>Core components and API</h3>
+					<ul>
+						<li class="fragment highlight-blue visible">Basic components</li>
+						<li class="fragment highlight-blue visible">User Interface</li>
+						<li class="fragment highlight-blue visible">List views</li>
+						<li class="fragment highlight-blue visible">Android-specific</li>
+						<li class="fragment highlight-blue visible">iOS-specific</li>
+						<li class="fragment highlight-blue visible">Others</li>
+					</ul>
+				</section>
+				<section>
+					<aside class="notes">
+						View - the most fundamental component for building a UI. <br>
+						Text - a component for displaying text;<br>
+						Image - a component for displaying image;<br>
+						TextInput - a component for inputting text into the app via a keyboard;<br>
+						ScrollView - provides a scrolling container that can host multiple components and views;
+					</aside>
+					<h3>Basic components</h3>
+					<img width='800px'
+						data-src="https://sun9-85.userapi.com/impg/cxwE4nGZeHr6TO5wJBIuVFiQr44jQlILtTdtjQ/sZQDuyyU1y4.jpg?size=812x407&quality=96&sign=386d8e01ec7f5b7b1fc679cae3df3486&type=album"
+						alt="React Native">
+				</section>
+				<section>
+					<aside class="notes">
+						View - the most fundamental component for building a UI. <br>
+						Text - a component for displaying text;<br>
+						Image - a component for displaying image;<br>
+						TextInput - a component for inputting text into the app via a keyboard;<br>
+						ScrollView - provides a scrolling container that can host multiple components and views;
+					</aside>
+					<h3>React natives API</h3>
+					<aside class="notes">Primitives are not globally in scope, must be imported</aside>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+						npm install --save react-primitives</h1>;
+				</code></pre>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+						import { View, Text, Image, StyleSheet } from "react-primitives";</h1>;
+			</code></pre>
+				</section>
+
+			</section>
+			<section>
+				<h4>Creating a new React Native Project</h4>
+				<section>
+					<ul>
+						<li>React native CLI</li>
+						<li>Create React Native App Cli</li>
+					</ul>
+					<aside class="notes"> There are 2 ways to create a new react native project</aside>
+				</section>
+				<section>
+					<aside class="notes">First way is</aside>
+					<h5>React native Cli</h5>
+					<ul class=class='r-fit-text'>
+						<li>Builds with nativ projects & code</li>
+						<li>Native code configurable</li>
+						<li>Needs proper environment setup in order to run</li>
+						<li>Does not include some important APIs without additional configuration</li>
+					</ul>
+				</section>
+				<section>
+					<aside class="notes">Second way is</aside>
+					<h5>Create React Native App Cli</h5>
+					<ul class=class='r-fit-text'>
+						<li>Builds without nativ projects & code</li>
+						<li>Native code not configurable</li>
+						<li>Will run without all SDKs & IDEs installed</li>
+						<li>Great for newer developers</li>
+						<li>Includes features like Camera, Location, Push Notifications, Social Authentication,
+							Accelerometer, File System, Image Picker configured out of the box</li>
+					</ul>
+				</section>
+				<section>
+					<h5>Installing dependencies</h5>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+						react-native init MyProjectName
+						or
+						create-react-native-app MyProjectName
+						cd MyProjectName
+						react-native run-ios / run-andr
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<aside class="notes">
+					With React Native, you style your application using JavaScript. All of the core components accept a
+					prop named style. The style names and values usually match how CSS works on the web, except names
+					are written using camel casing.
+					The style prop can be a plain old JavaScript object. That's what we usually use for example code.
+					You can also pass an array of styles - the last style in the array has precedence, so you can use
+					this to inherit styles.
+					As a component grows in complexity, it is often cleaner to use StyleSheet.create to define several
+					styles in one place. Here's an example:
+				</aside>
+				<h4>React native styling</h4>
+				<p class="r-fit-text">With React Native, you style your application using JavaScript. All of the core
+					components accept a
+					prop named style. The style names and values usually match how CSS works on the web, except names
+					are written using camel casing, e.g. backgroundColor rather than background-color.</p>
+				<img width='850px'
+					data-src="https://sun9-81.userapi.com/impg/6ho60YifjEXcyL7ktivsS-ucAruPAbv56KsizA/Re4NPXD4Vms.jpg?size=1617x715&quality=96&sign=a91ff5148418a637f3db1b321f119e07&type=album"
+					alt="React Native">
+			</section>
+			<section>
+
+				<h3>Networking</h3>
+				<section>
+					<aside class="notes">
+						Many mobile apps need to load resources from a remote URL. You may want to make a POST request
+						to a
+						REST API, or you may need to fetch a chunk of static content from another server.<br>
+						на первый клик: React Native provides the Fetch API for your networking needs.
+						на третий клик: React Native also supports WebSockets, a protocol which provides full-duplex
+						communication channels over a single TCP connection.
+					</aside>
+					<ul>
+						<li class="fragment highlight-blue visible">New Fetch API Supported</li>
+						<li class="fragment highlight-blue visible">Raw XHR implemented if required</li>
+						<li class="fragment highlight-blue visible">WebSockets Supported</li>
+					</ul>
+				</section>
+				<section>
+					<aside class="notes">Here u can see a fetch API example.</aside>
+					<h4>Fetch API</h4>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+						const getMoviesFromApi = () => {
+							return fetch('https://reactnative.dev/movies.json')
+							  .then((response) => response.json())
+							  .then((json) => {
+								return json.movies;
+							  })
+							  .catch((error) => {
+								console.error(error);
+							  });
+						  };
+					</code></pre>
+				</section>
+				<section>
+					<aside class="notes">You can also use the async / await syntax in a React Native app:</aside>
+					<h4>Fetch API - async / await</h4>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+						const getMoviesFromApiAsync = async () => {
+							try {
+							  const response = await fetch(
+								'https://reactnative.dev/movies.json'
+							  );
+							  const json = await response.json();
+							  return json.movies;
+							} catch (error) {
+							  console.error(error);
+							}
+						  };
+					</code></pre>
+				</section>
+				<section>
+					<aside class="notes">
+						The XMLHttpRequest API is built into React Native. This means that you can use third party
+						libraries such as frisbee or axios that depend on it, or you can use the XMLHttpRequest API
+						directly if you prefer.
+					</aside>
+					<h4>Using Other Networking Libraries</h4>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+						var request = new XMLHttpRequest();
+						request.onreadystatechange = (e) => {
+						if (request.readyState !== 4) {
+							return;
+						}
+
+						if (request.status === 200) {
+							console.log('success', request.responseText);
+						} else {
+							console.warn('error');
+						}
+						};
+
+						request.open('GET', 'https://mywebsite.com/endpoint/');
+						request.send();
+					</code></pre>
+				</section>
+				<section>
+					<h4>WebSocket</h4>
+					<aside class="notes">
+						React Native also supports WebSockets, a protocol which provides full-duplex communication
+						channels over a single TCP connection.
+					</aside>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+						var ws = new WebSocket('ws://host.com/path');
+	
+						ws.onopen = () => {
+						  // connection opened
+						  ws.send('something'); // send a message
+						};
+						
+						ws.onmessage = (e) => {
+						  // a message was received
+						  console.log(e.data);
+						};
+						
+						ws.onerror = (e) => {
+						  // an error occurred
+						  console.log(e.message);
+						};
+						
+						ws.onclose = (e) => {
+						  // connection closed
+						  console.log(e.code, e.reason);
+						};
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<aside class="notes">React Native is an exciting framework that enables web developers to create robust
+					mobile applications using their existing JavaScript knowledge. It offers faster mobile development,
+					and more efficient code sharing across iOS, Android, and the Web, without sacrificing the end user’s
+					experience or application quality. The tradeoff is that it’s new, and still a work in progress. If
+					your team can handle the uncertainty that comes with working with a new technology, and wants to
+					develop mobile applications for more than just one platform, you should be looking at React Native.
+				</aside>
+				<h2>The end.</h2>
+
+			</section>
+
 		</div>
+	</div>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
 </html>
